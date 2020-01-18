@@ -1,6 +1,6 @@
  /****    
  * Name: Zhuldyz Ilyassova
- * Student Number: XXXXXXX
+ * Student Number: T00650013
  * Assignment #1: 1 D and 2 D Arrays
  * Due Date:  January 21, 2020
  * Program Description:  Exam test with score output for all students who taken exam
