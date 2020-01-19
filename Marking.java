@@ -5,24 +5,22 @@
  * Due Date:  January 21, 2020
  * Program Description:  Exam test with score output for all students who taken exam
  ****/ 
-
-import java.util.*;
-public class Demo
+public class Marking
   {
      //data
-       private static String [] names;
-       private static char [][] answers;
-       private static char [] key;
-       private static int [] studentsum;
-       private static int [] questionsum;
-       //private static int [] some;
-       private static int num;
+       private static String [] names = new String[14];
+       private static char [][] answers = new char[14][10];
+       private static char [] key = new char[10];
+       private static int [] studentsum = new int[10];
+       private static int [] questionsum = new int [14];
        
        
-    static
+       
+   public static void initData ()
    {
-               num = 10;
-        String [] names = new String [] {"Audrey", "Brian", "Elizabeth", "Ellen", 
+        
+        
+     String [] names = {"Audrey", "Brian", "Elizabeth", "Ellen", 
                            "Gregory", "Harold", "Lewis", "Kevin", "Kieran", 
                            "Michael", "Peter", "Wayne", "Yang", "Zachary"};
         
@@ -77,27 +75,46 @@ public class Demo
    
    public static void printResults()
    {
-      
-      System.out.printf("%5s%27s%18s/%1d\n", "Students", "Questions#", "Score", num);
+     
+      System.out.printf("%5s%27s%18s/%1d\n", "Students", "Questions#", "Score", studentsum.length);
       
       System.out.printf("%17d%3d%3d%3d%3d%3d%3d%3d%3d%3d\n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     
+        for(int i = 0; i < answers.length; i++)
+       {
+        System.out.printf("%-12s",names[i]);
+        
+        
+      
+        }
+   }
      
-        
-      }
-        
- 
+     
+     
+   
+   
+   
    
        public static void main (String [] args)
        {
-          printResults(); 
+         initData();
+         printResults(); 
           
             
-        
+            
+            
+            
+            
+            
        }
        
        
- 
+       
+       
+       
           
        
   }
+
+    
+  
