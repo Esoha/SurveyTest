@@ -1,3 +1,12 @@
+/****    
+ * Name: Zhuldyz Ilyassova
+ * Student Number: T00650013
+ * Assignment #1: 1 D and 2 D Arrays
+ * Due Date:  January 21, 2020
+ * Program Description:  Exam test with score output for all students who taken exam
+ ****/ 
+
+import java.util.*;
 public class Marking
   {
      //data
@@ -6,7 +15,7 @@ public class Marking
        private static char [] key;
        private static int [] studentsum;
        private static int [] questionsum;
-       private static int [] correct;
+       
        
        
    public static void initData ()
@@ -35,11 +44,7 @@ public class Marking
         };
         
         
-    //int student = answers.length;
-    //int question = answers[0].length;
-   
-   //int [] studentsum = new int [student];
-   //int [] questionsum = new int [question];
+    
    }
       
    
@@ -47,9 +52,11 @@ public class Marking
    {
      
      for (int i = 0; i < answers.length; i++)
-       for (int k = 0; k < answers[0].length; k++)
+       for (int k = 0; k < answers[i].length; k++)
+     {
        if (key[k] == answers[i][k])
-     correct [k]++;
+     studentsum [k]++;
+     }
         
    }
    
@@ -57,33 +64,46 @@ public class Marking
    public static void questions ()
    {
      
-     for (int i = 0; i < answers[0].length; i++)
+     for (int i = 0; i < answers[i].length; i++)
        for (int k = 0; k < answers.length; k++)
+     {
        if (key[i]== answers[k][i])
-       correct [i]++; 
+       questionsum [i]++; 
+     }
+    
        
    }
    
-   
-  public static void printResults ()
-  {
+   public static void printResults()
+   {
+     
+      System.out.printf("%5s%27s%18s/%1d\n", "Students", "Questions#", "Score", 10);
+      
+      System.out.printf("%17d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%4d\n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     
-    
-    System.out.format("Students              Questions #            Score/%d", correct);
-    
-    
-    
-    
-    
-    
-  }
+      for(int i = 0; i < answers.length; i++)
+      {
+        System.out.printf("%-12s",names[i]);
+        
+        
+        
+        
+        
+        
+      }
+     
+  
+     
+     
+     
+   }
    
    
    
        public static void main (String [] args)
        {
-            
-          printResults();
+          printResults(); 
+          
             
             
             
