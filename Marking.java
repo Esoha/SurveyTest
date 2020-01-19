@@ -7,7 +7,7 @@
  ****/ 
 
 import java.util.*;
-public class Marking
+public class Demo
   {
      //data
        private static String [] names;
@@ -15,12 +15,13 @@ public class Marking
        private static char [] key;
        private static int [] studentsum;
        private static int [] questionsum;
+       //private static int [] some;
+       private static int num;
        
        
-       
-   public static void initData ()
+    static
    {
-        
+               num = 10;
         String [] names = new String [] {"Audrey", "Brian", "Elizabeth", "Ellen", 
                            "Gregory", "Harold", "Lewis", "Kevin", "Kieran", 
                            "Michael", "Peter", "Wayne", "Yang", "Zachary"};
@@ -76,46 +77,27 @@ public class Marking
    
    public static void printResults()
    {
-     
-      System.out.printf("%5s%27s%18s/%1d\n", "Students", "Questions#", "Score", 10);
       
-      System.out.printf("%17d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%4d\n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+      System.out.printf("%5s%27s%18s/%1d\n", "Students", "Questions#", "Score", num);
+      
+      System.out.printf("%17d%3d%3d%3d%3d%3d%3d%3d%3d%3d\n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     
-      for(int i = 0; i < answers.length; i++)
-      {
-        System.out.printf("%-12s",names[i]);
-        
-        
-        
-        
-        
+     
         
       }
-     
-  
-     
-     
-     
-   }
-   
-   
+        
+ 
    
        public static void main (String [] args)
        {
           printResults(); 
           
             
-            
-            
-            
-            
-            
+        
        }
        
        
-       
-       
-       
+ 
           
        
   }
