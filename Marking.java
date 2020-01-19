@@ -69,7 +69,7 @@ public class Marking
   {
     
     
-    
+    System.out.format("Students              Questions #            Score/%d", correct);
     
     
     
