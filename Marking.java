@@ -8,7 +8,7 @@
 public class Marking
   {
      //data
-       private static String [] names = new String[14];
+       private static String [] names;
        private static char [][] answers = new char[14][10];
        private static char [] key = new char[10];
        private static int [] studentsum = new int[10];
@@ -20,13 +20,13 @@ public class Marking
    {
         
         
-     String [] names = {"Audrey", "Brian", "Elizabeth", "Ellen", 
+      names = new String [] {"Audrey", "Brian", "Elizabeth", "Ellen", 
                            "Gregory", "Harold", "Lewis", "Kevin", "Kieran", 
                            "Michael", "Peter", "Wayne", "Yang", "Zachary"};
         
-        char [] key = {'F','T','F','F','T','F','F','T','F','T'};
+        key = new char[] {'F','T','F','F','T','F','F','T','F','T'};
         
-        char [][] answers = {{'F','T','T','F','T','F','T','T','F','T'},
+        answers = new char[][] {{'F','T','T','F','T','F','T','T','F','T'},
                              {'F','T','F','T','F','T','T','T','F','F'},
                              {'F','T','T','F','T','T','T','T','T','T'},
                              {'T','T','F','F','T','F','F','T','T','T'},
@@ -51,12 +51,13 @@ public class Marking
    {
      
      for (int i = 0; i < answers.length; i++)
+     {
        for (int k = 0; k < answers[i].length; k++)
      {
        if (key[k] == answers[i][k])
      studentsum [k]++;
      }
-        
+     }   
    }
    
    
@@ -64,13 +65,14 @@ public class Marking
    {
      
      for (int i = 0; i < answers[i].length; i++)
+     {
        for (int k = 0; k < answers.length; k++)
      {
        if (key[i]== answers[k][i])
        questionsum [i]++; 
      }
     
-       
+     }   
    }
    
    public static void printResults()
@@ -82,8 +84,13 @@ public class Marking
     
         for(int i = 0; i < answers.length; i++)
        {
-        System.out.printf("%-12s",names[i]);
+        System.out.printf("%-13s",names[i]);
         
+        for(int k = 0; k < answers[i].length; k++)
+        {
+          System.out.printf("%3c", answers[i][k]);
+        }
+        System.out.printf("%11d\n", questionsum[i]);
         
       
         }
@@ -101,6 +108,28 @@ public class Marking
          printResults(); 
           
             
+            
+            
+            
+            
+            
+       }
+       
+       
+       
+       
+       
+          
+       
+  }
+                          
+    
+   
+   
+   
+   
+   
+    
             
             
             
