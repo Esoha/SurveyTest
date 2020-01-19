@@ -1,27 +1,18 @@
- /****    
- * Name: Zhuldyz Ilyassova
- * Student Number: T00650013
- * Assignment #1: 1 D and 2 D Arrays
- * Due Date:  January 21, 2020
- * Program Description:  Exam test with score output for all students who taken exam
- ****/ 
-
-
 public class Marking
   {
      //data
-       private String [] names;
-       private char [][] answers;
-       private char [] key;
-       private int [] studentResults;
-       private int [] questionResults;
-       
+       private static String [] names;
+       private static char [][] answers;
+       private static char [] key;
+       private static int [] studentsum;
+       private static int [] questionsum;
+       private static int [] correct;
        
        
    public static void initData ()
    {
         
-        String [] names = {"Audrey", "Brian", "Elizabeth", "Ellen", 
+        String [] names = new String [] {"Audrey", "Brian", "Elizabeth", "Ellen", 
                            "Gregory", "Harold", "Lewis", "Kevin", "Kieran", 
                            "Michael", "Peter", "Wayne", "Yang", "Zachary"};
         
@@ -43,13 +34,35 @@ public class Marking
                              {'T','F','T','F','T','T','F','T','F','T'}
         };
         
-          
+        
+    //int student = answers.length;
+    //int question = answers[0].length;
+   
+   //int [] studentsum = new int [student];
+   //int [] questionsum = new int [question];
    }
       
    
+   public static void studentResults ()
+   {
+     
+     for (int i = 0; i < answers.length; i++)
+       for (int k = 0; k < answers[0].length; k++)
+       if (key[k] == answers[i][k])
+     correct [i]++;
+        
+   }
    
    
-   
+   public static void questions ()
+   {
+     
+     for (int i = 0; i < answers[0].length; i++)
+       for (int k = 0; k < answers.length; k++)
+       if (key[i]== answers[k][i])
+       correct [i]++; 
+       
+   }
    
    
    
@@ -58,7 +71,7 @@ public class Marking
        public static void main (String [] args)
        {
             
-            
+          
             
             
             
