@@ -49,7 +49,7 @@ public class Marking
      for (int i = 0; i < answers.length; i++)
        for (int k = 0; k < answers[0].length; k++)
        if (key[k] == answers[i][k])
-     correct [i]++;
+     correct [k]++;
         
    }
    
