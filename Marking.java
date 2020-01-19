@@ -65,13 +65,25 @@ public class Marking
    }
    
    
+  public static void printResults ()
+  {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  }
    
    
    
        public static void main (String [] args)
        {
             
-          
+          printResults();
             
             
             
